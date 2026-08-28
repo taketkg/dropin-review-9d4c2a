@@ -499,8 +499,21 @@ footer.site{border-top:1px solid var(--line);padding:48px 0 40px;background:var(
 .sol ul li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:baseline}
 .sol ul li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--base);margin-top:8px}
 .sol.lead ul li::before{background:var(--accent)}
-.sol .foot{margin-top:auto;padding-top:16px;border-top:1px dashed var(--line);font-size:.86rem}
-.sol .foot b{font-family:"Overpass Mono","Zen Kaku Gothic New",sans-serif;color:var(--accent-ink);font-size:.9rem}
+.sol .foot{
+  margin-top:auto;padding-top:16px;border-top:1px dashed var(--line);font-size:.86rem;
+  display:grid;grid-template-columns:auto 1fr;gap:0 14px;align-items:baseline;
+}
+.sol .foot .k{
+  font-family:"Overpass Mono","Zen Kaku Gothic New",sans-serif;
+  font-size:.68rem;letter-spacing:.12em;color:var(--base);white-space:nowrap;
+}
+.sol.lead .foot .k{color:var(--accent-ink)}
+.sol .foot .v{min-width:0}
+.sol .foot b{
+  display:block;font-family:"Overpass Mono","Zen Kaku Gothic New",sans-serif;
+  color:var(--accent-ink);font-size:1.02rem;letter-spacing:.02em;margin-bottom:4px;
+}
+.sol .foot .muted{display:block;font-size:.82rem;line-height:1.7}
 
 /* ---------- steps to start ---------- */
 .startflow{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
@@ -714,13 +727,13 @@ footer.site{border-top:1px solid var(--line);padding:48px 0 40px;background:var(
 <!-- ============ SOLUTIONS ============ -->
 <section id="solutions" class="alt">
   <div class="wrap">
-    <p class="eyebrow rise">Two solutions</p>
-    <h2 class="rise">2つの支援ソリューション</h2>
+    <p class="eyebrow rise">Two plans</p>
+    <h2 class="rise">2つの支援プラン</h2>
     <p class="sec-lede rise muted" style="max-width:44em;margin-bottom:0">法人向けに2つのプランをご用意しています。まず経営者の相談相手が必要なのか、組織そのものを動かす必要があるのか。どちらから始めても構いません。</p>
 
     <div class="solutions">
       <div class="sol rise">
-        <span class="no">SOLUTION 01</span>
+        <span class="no">PLAN 01</span>
         <h3>経営者専属・ブレスト＆調律パートナー</h3>
         <span class="kind">月額顧問型 ─ 継続伴走</span>
         <p>孤独な経営者の、思考の整理相手です。月数万円から始められます。</p>
@@ -729,12 +742,15 @@ footer.site{border-top:1px solid var(--line);padding:48px 0 40px;background:var(
           <li>ビジョンや方針を、現場に伝わる言葉へ翻訳する</li>
           <li>社内コミュニケーションの壁打ち相手になる</li>
         </ul>
-        <p class="foot">料金：<b>月額制（応相談）</b><br><span class="muted">ご相談内容と頻度によって設計します。</span></p>
+        <div class="foot">
+          <span class="k">料金</span>
+          <div class="v"><b>月額制（応相談）</b><span class="muted">ご相談内容と頻度によって設計します。</span></div>
+        </div>
         <a class="jump" href="#plan01">PLAN 01 の詳細を見る →</a>
       </div>
 
       <div class="sol lead rise">
-        <span class="no">SOLUTION 02</span>
+        <span class="no">PLAN 02</span>
         <h3>組織改善3か月調律プログラム</h3>
         <span class="kind">短期集中 ─ 組織変容型</span>
         <p>サーベイ（定量）と定性対話（心理分析）を組み合わせ、組織の歪みを3か月で土台から整えるパッケージです。</p>
@@ -743,7 +759,10 @@ footer.site{border-top:1px solid var(--line);padding:48px 0 40px;background:var(
           <li>1〜2か月目：経営者思考の言語化 ＆ 社員定性ヒアリング</li>
           <li>3か月目：オーダーメイド・セミナー ＋ 経営フィードバック</li>
         </ul>
-        <p class="foot">料金：<b>500,000円（税別）</b><br><span class="muted">3か月完結・社員5名定額パック。初回サーベイ分析は無料。</span></p>
+        <div class="foot">
+          <span class="k">料金</span>
+          <div class="v"><b>500,000円（税別）</b><span class="muted">3か月完結・社員5名定額パック。初回サーベイ分析は無料。</span></div>
+        </div>
         <a class="jump" href="#flow">PLAN 02 の詳細を見る →</a>
       </div>
     </div>
